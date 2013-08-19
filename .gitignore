@@ -1,6 +1,8 @@
 *.beam
 erl_crash.dump
 .eunit
+.session.vim
+tags
 ebin
 doc
 

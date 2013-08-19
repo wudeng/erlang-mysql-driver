@@ -1,10 +1,29 @@
 {application, mysql,
- [{description, "MySQL Library"},
-  {vsn, "34"},
-  {modules, [mysql,
-             mysql_auth,
-             mysql_conn,
-             mysql_recv]},
-  {registered, []},
-  {applications, [kernel, stdlib]}]}.
+    [
+        {description, "MySQL Library"},
+        {vsn, "34"},
+        {modules, [
+            mysql,
+            mysql_app,
+            mysql_sup,
+            mysql_auth,
+            mysql_conn,
+            mysql_recv
+        ]},
+        {registered, []},
+        {mod, {mysql_app, []}},
+        {applications, [kernel, stdlib]},
+        {env, [
+            {mysql, [
+                {host    , "127.0.0.1"},
+                {port    , 3306       },
+                {user    , "jy1234"   },
+                {password, "jy1234"   },
+                {database, "jy"       },
+                {encoding, utf8       },
+                {pools, 6}
+            ]}
+        ]}
+    ]
+}.
 

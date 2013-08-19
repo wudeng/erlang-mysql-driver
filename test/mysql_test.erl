@@ -6,8 +6,8 @@
 -compile(export_all).
 
 test() ->
-    compile:file("/usr/local/lib/erlang/lib/mysql/mysql.erl"),
-    compile:file("/usr/local/lib/erlang/lib/mysql/mysql_conn.erl"),
+    %%compile:file("/usr/local/lib/erlang/lib/mysql/mysql.erl"),
+    %%compile:file("/usr/local/lib/erlang/lib/mysql/mysql_conn.erl"),
     
     %% Start the MySQL dispatcher and create the first connection
     %% to the database. 'p1' is the connection pool identifier.
